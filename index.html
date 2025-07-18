@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Poetry Generator</title>
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 <body>
     <div  class="container">
@@ -14,7 +15,7 @@
     <h1>Welcome to the Southern Poetry Generator</h1>
     </header>
    <main>
-    <form>
+    <form id="poem-generator">
         <input type="text" placeholder="Enter the topic of the poem here" 
         autofocus
         required
@@ -24,11 +25,7 @@
         <input type="submit" class="submit-button"/>
 
     </form>
-    <div class="poem">
-        I have always loved mood
-        <br/>
-        rings as a child, it was the treasure
-
+    <div class="poem" id="poem">
     </div>
    </main>
     <footer>  <p>
