@@ -1,18 +1,21 @@
 function generatePoem(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Clear previous content
-    let poemElement = document.querySelector("#poem");
-    poemElement.innerHTML = "";
+  let poemElement = document.querySelector("#poem");
 
-    // Start typewriter effect
-    const typewriter = new Typewriter("#poem", {
-        strings: ["I always loved mood"],
-        autoStart: true,
-        delay: 50,
-        cursor: ""
-    });
+  
+  poemElement.innerHTML = "";
+
+  
+  new Typewriter(poemElement, {
+    autoStart: true,
+    delay: 50,
+    cursor: "",
+  })
+    .typeString("I always loved mood")
+    .start();
 }
 
-let poemFormElement = document.querySelector("#poem-generator-form");
+let poemFormElement = document.querySelector("#poem-generator");
 poemFormElement.addEventListener("submit", generatePoem);
+
