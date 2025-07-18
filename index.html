@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poetry Generator</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-</head>
-<body>
-    <div  class="container">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to the Southern Poetry Generator</h1>
+      </header>
 
-    </div>
-    <header>
-    <h1>Welcome to the Southern Poetry Generator</h1>
-    </header>
-   <main>
-    <form id="poem-generator">
-        <input type="text" placeholder="Enter the topic of the poem here" 
-        autofocus
-        required
-        autcomplete="off" 
-        class="instruction"
-        />
-        <input type="submit" class="submit-button"/>
+      <main>
+        <form id="poem-generator">
+          <input
+            type="text"
+            id="poem-topic"
+            placeholder="Enter the topic of the poem here"
+            autofocus
+            required
+            autocomplete="off"
+            class="instruction"
+          />
+          <input
+            type="submit"
+            class="submit-button"
+            value="Generate Poem"
+          />
+        </form>
 
-    </form>
-    <div class="poem" id="poem">
-    </div>
-   </main>
-    <footer>  <p>
+        <div class="poem" id="poem"></div>
+      </main>
+
+      <footer>
+        <p>
           This project was coded by
           <a
             href="https://www.shecodes.io/graduates/158174-monica-privett"
@@ -36,19 +44,23 @@
             rel="noopener noreferrer"
             >Monica Privett</a
           >
-          and is 
+          and is
           <a
             href="https://github.com/SteppingStoneCake"
             target="_blank"
-            rel="noopener noreferrer"> on github
-        </a>
-          
+            rel="noopener noreferrer"
+            >on GitHub</a
+          >
+          and
           <a
             href="https://app.netlify.com/teams/steppingstonecake/projects"
             target="_blank"
             >hosted on Netlify</a
-          >
-        </p></footer>
-          <script src="src/index.js"></script>
-</body>
+          >.
+        </p>
+      </footer>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
 </html>
