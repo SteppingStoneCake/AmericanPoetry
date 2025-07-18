@@ -2,35 +2,44 @@ function generatePoem(event) {
   event.preventDefault();
 
   let apiKey = "b8e4c9bea5b1fcaco0bf15019t432341";
-  let prompt = "Write a short poem about mood.";
-  let context = "Be poetic and inspiring.";
-  
-  // Correctly build the URL using a template literal
+  let topicInput = document.querySelector("#poem-topic");
+  let topic = topicInput.value.trim();
+
+  if (topic.length === 0) {
+    alert("Please enter a topic to generate a poem.");
+    return;
+  }
+
+  let prompt = `Write a Southern-style poem about ${topic}.`;
+  let context = "Use rich imagery and Southern culture. Keep it poetic, not too long.";
+
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(
     prompt
   )}&context=${encodeURIComponent(context)}&key=${apiKey}`;
 
   let poemElement = document.querySelector("#poem");
-  poemElement.innerHTML = "Loading...";
+  poemElement.innerHTML = "📝 Generating your poem...";
 
-  // Make the API call
-  axios.get(apiUrl).then(function (response) {
-    // Clear the loading text
-    poemElement.innerHTML = "";
+  axios
+    .get(apiUrl)
+    .then(function (response) {
+      let poem = response.data.answer;
+      poemElement.innerHTML = "";
 
-    // Use Typewriter effect to animate the poem
-    new Typewriter(poemElement, {
-      autoStart: true,
-      delay: 50,
-      cursor: "",
+      new Typewriter(poemElement, {
+        autoStart: true,
+        delay: 40,
+        cursor: "",
+      })
+        .typeString(poem)
+        .start();
     })
-      .typeString(response.data.answer)
-      .start();
-  }).catch(function (error) {
-    poemElement.innerHTML = "Something went wrong. Please try again.";
-    console.error(error);
-  });
+    .catch(function (error) {
+      console.error("API Error:", error);
+      poemElement.innerHTML =
+        "⚠️ Something went wrong. Please try again later.";
+    });
 }
 
-let poemFormElement = document.querySelector("#poem-generator");
-poemFormElement.addEventListener("submit", generatePoem);
+let poemForm = document.querySelector("#poem-generator");
+poemForm.addEventListener("submit", generatePoem);

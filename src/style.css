@@ -1,85 +1,64 @@
-body{
-    background-color: antiquewhite;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fdf6f0;
+  color: #3a2e2a;
+  padding: 20px;
+  margin: 0;
 }
 
-.container{
-    margin: 120px auto;
-    max-width: 600px;
-
-
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
 }
-
-header{
-    margin-bottom: 30px;
-    
-}
-
-a{
-    color:blueviolet;
-    
-}
-
 
 h1 {
-    text-align: center;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 1.5;
-    color: blueviolet;
-
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-.form{
-    padding: 30px;
-    background-color: bisque;
-    border-radius: 10px;
-    box-shadow: 0px 20px 60px rgba(65,50,100,0.08);
-    display: flex;
-    margin-bottom: 30px;
+form {
+  margin-bottom: 20px;
 }
 
-.instruction{
-    padding: 16px;
-    border: 1px darkgray;
-    width: 80%;
-    font-size: 16px;
-    border-radius: 50px;
-    line-height: 20px;
-    color:black
+.instruction {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-.submit-button{
-    margin-left: 10px;
-    background-color: blueviolet;
-    width: 150px;
-    color:white;
-    border: none;
-    border-radius: 15px;
-    padding: 14px;
-    font-size: 16px;
-
-
-
+.submit-button {
+  padding: 10px 20px;
+  background-color: #a45b3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.poem{
-    font-size: 16px;
-    background-color: white;
-    padding:20px;
-    line-height: 2;
-    border-left: 2px solid gray;
-    box-shadow: 0px 20px 60px rgba(65,50,100,0.08);
-    border-radius: 10px;
-
-
+.submit-button:hover {
+  background-color: #8a4a32;
 }
 
-.footer{
-    text-align: center;
-    font-size: 13px;
-    margin-top: 30px;
+.examples {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+}
 
+.poem {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.85rem;
+  color: #666;
 }
