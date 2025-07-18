@@ -9,7 +9,7 @@ function generatePoem(event) {
     const typewriter = new Typewriter("#poem", {
         strings: ["I always loved mood"],
         autoStart: true,
-        delay: 1,
+        delay: 50,
         cursor: ""
     });
 }
